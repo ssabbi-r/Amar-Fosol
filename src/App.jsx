@@ -1,23 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./components/Login";
-import ForgotPassword from "./components/ForgotPassword";
-import OtpVerification from "./components/OtpVerification";
-import ResetPassword from "./components/ResetPassword"; // Import new component
+import HeaderPage from "./buyer/HeaderPage";
+import SearchProduct from "./buyer/SearchProduct";
+import BuyerProfile from "./buyer/BuyerProfile"; // Import BuyerProfile component
 
 function App() {
   return (
-    
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/otp-verification" element={<OtpVerification />} />
-        <Route path="/reset-password" element={<ResetPassword />} />  
+        <Route path="/" element={<HeaderPage />} />
+        <Route path="/buyer/search" element={<SearchProduct />} />
+        <Route path="/buyer/profile" element={<BuyerProfile />} /> {/* Add profile route */}
       </Routes>
     </Router>
-   
-    
   );
 }
 
